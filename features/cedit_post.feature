@@ -2,8 +2,8 @@ Feature: Iniciar una conversación
 
 
 @user1 @web
-Scenario: Hacer Login, Crear un post, publicarlo y consultar la publicación
-  Given I navigate to page "/ghost"
+Scenario: Hacer Login, Editar un post, Publicar Post y Validar publicación
+  Given I navigate to my page "/ghost"
   And I wait for 3 seconds
   When I put identification "usuario_ghost"
   And I put password "usuario_ghost"
@@ -14,12 +14,20 @@ Scenario: Hacer Login, Crear un post, publicarlo y consultar la publicación
   And I wait for 2 seconds
   And I click button "new-post"
   And I wait for 2 seconds
-  And I enter text "Test Post"
+  And I enter text "Editable Post"
   And I wait for 2 seconds
+  And I send Enter
+  And I wait for 5 seconds
+  And I click button "back-to-posts-button"
+  And I wait for 5 seconds
+  And I click the post title is "Editable Post"
+  And I wait for 5 seconds
+  And I Click Post Update Tittle "New Post Title Name"
   And I send Enter
   And I click button "publish"
   And I wait for 2 seconds
   And I click button "continue"
   And I wait for 2 seconds
   And I click button "confirm-publish"
-Then I see the post title is "Test Post"
+  And I wait for 2 seconds
+Then I see the post title is "New Post Title Name"

@@ -12,6 +12,11 @@ Given('I navigate to my page {string}', async function (page) {
     return await this.driver.url(url);
 });
 
+When('I navigate to {string}', async function (page) {
+    let url = properties.baseUrl + page;
+    return await this.driver.url(url);
+});
+
 When('I put identification {string}', async function (user) {
     let email = properties[user].email;
     let element = await this.driver.$('#identification');
@@ -47,6 +52,13 @@ When('I click the post title is {string}', async function (expectedTitle) {
     return await element.click();    
 });
 
+When('I Click Post Update Tittle {string}', async function (expectedTitle) {
+    const selector = properties.elements['post-title-input'];
+    const element = await this.driver.$(selector);
+    return await element.setValue(expectedTitle);
+    
+});
+
 Then('I see the post title is {string}', async function (expectedTitle) {
     const selector = properties.elements['post-title'];
     const element = await this.driver.$(selector);
@@ -60,3 +72,11 @@ Then('I Cant Found Post Tittle {string}', async function (expectedTitle) {
     const actualTitle = await element.getText();
     assert.notStrictEqual(actualTitle, expectedTitle); 
 });
+
+Then('I Find Post Tittle {string}', async function (expectedTitle) {
+    const selector = properties.elements['article-title'];
+    const element = await this.driver.$(selector);
+    const actualTitle = await element.getText();
+    assert.strictEqual(actualTitle, expectedTitle, `Expected post title to be "${expectedTitle}", but found "${actualTitle}"`); 
+});
+
