@@ -19,10 +19,16 @@
         "new-post":"[data-test-new-post-button]",
         "publish": "[data-test-button=\"publish-flow\"]",
         "continue": "[data-test-button=\"continue\"]",
-        "confirm-publish": "[data-test-button=\"confirm-publish\"]"
+        "confirm-publish": "[data-test-button=\"confirm-publish\"]",
+        "settings-menu-toggle": ".settings-menu-toggle",
+        "back-to-posts-button": "[data-test-link=\"posts\"]",
+        "delete-post-button": ".settings-menu-delete-button",
+        "confirm-delete-button": "//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-red') and contains(@class, 'gh-btn-icon') and contains(., 'Delete')]"
       },
       "elements": {
-        "post-title": ".gh-post-bookmark-title"
-      }
+        "post-title": ".gh-post-bookmark-title",
+        "lista-post-title": "h3.gh-content-entry-title",
+        "post-title-input": "[data-test-editor-title-input=\"\"]"
+      }  
 
 }

@@ -1,0 +1,368 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "iniciar-una-conversación;hacer-login,-crear-un-post,-publicarlo-y-consultar-la-publicación",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Hacer Login, Crear un post, publicarlo y consultar la publicación",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2624000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I navigate to page \"/ghost\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I put identification \"usuario_ghost\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:15"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I put password \"usuario_ghost\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:21"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click button \"sign-in\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click button \"posts\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click button \"new-post\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I enter text \"Deleteable Post\"",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\web.js:65"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I send Enter",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:38"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click button \"back-to-posts-button\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I wait for 5 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click the post title is \"Deleteable Post\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:42"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click button \"settings-menu-toggle\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click button \"delete-post-button\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I click button \"confirm-delete-button\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\post_step.js:28"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I wait for 5 seconds",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "I Cant Found  \"Deleteable Post\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user1",
+            "line": 4
+          },
+          {
+            "name": "@web",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "iniciar-una-conversación",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Iniciar una conversación",
+    "tags": [],
+    "uri": "features\\edit_post.feature"
+  }
+]

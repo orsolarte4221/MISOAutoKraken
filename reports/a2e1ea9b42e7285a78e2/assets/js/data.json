@@ -1,0 +1,1 @@
+[{"name":"Iniciar una conversación","nodes":[{"name":"","id":"empty","image":null},{"name":"Before ","id":"1","image":null,"status":"passed"},{"name":"Given  I navigate to page \"/ghost\"","id":"2","image":null,"status":"failed"}],"links":[{"source":0,"target":1,"value":1,"owner":"1","owner_model":"Web"},{"source":1,"target":2,"value":1,"owner":"1","owner_model":"Web"}]}]

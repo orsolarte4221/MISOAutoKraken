@@ -7,7 +7,7 @@ const propertiesPath = path.join(__dirname, 'properties.json');
 // Lee y analiza el archivo properties.json
 const properties = JSON.parse(fs.readFileSync(propertiesPath, 'utf8'));
 
-Given('I navigate to page {string}', async function (page) {
+Given('I navigate to my page {string}', async function (page) {
     let url = properties.baseUrl + page;
     return await this.driver.url(url);
 });
@@ -39,9 +39,24 @@ When('I send Enter', async function () {
     return await this.driver.keys('Enter');
 });
 
+When('I click the post title is {string}', async function (expectedTitle) {
+    //let element = await this.driver.$x("//h3[contains(@class, 'gh-content-entry-title') and contains(., '${expectedTitle}')]");
+    const selector = properties.elements['lista-post-title'];
+    let element = await this.driver.$(selector);
+    assert(element, 'Element not found');
+    return await element.click();    
+});
+
 Then('I see the post title is {string}', async function (expectedTitle) {
     const selector = properties.elements['post-title'];
     const element = await this.driver.$(selector);
     const actualTitle = await element.getText();
     assert.strictEqual(actualTitle, expectedTitle, `Expected post title to be "${expectedTitle}", but found "${actualTitle}"`);
+});
+
+Then('I Cant Found Post Tittle {string}', async function (expectedTitle) {
+    const selector = properties.elements['post-title-input'];
+    const element = await this.driver.$(selector);
+    const actualTitle = await element.getText();
+    assert.notStrictEqual(actualTitle, expectedTitle); 
 });
