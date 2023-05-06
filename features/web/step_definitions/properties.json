@@ -1,4 +1,5 @@
-{
+{  
+   "baseUrl": "http://localhost:2368",
     "user2": {
       "email": "orsolarte@hotmail.com",
       "password": "Ejemplo"

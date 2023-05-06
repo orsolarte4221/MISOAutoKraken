@@ -7,6 +7,11 @@ const propertiesPath = path.join(__dirname, 'properties.json');
 // Lee y analiza el archivo properties.json
 const properties = JSON.parse(fs.readFileSync(propertiesPath, 'utf8'));
 
+Given('I navigate to page {string}', async function (page) {
+    let url = properties.baseUrl + page;
+    return await this.driver.url(url);
+});
+
 When('I put identification {string}', async function (user) {
     let email = properties[user].email;
     let element = await this.driver.$('#identification');
