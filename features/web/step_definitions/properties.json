@@ -1,0 +1,27 @@
+{
+    "user2": {
+      "email": "orsolarte@hotmail.com",
+      "password": "Ejemplo"
+    },
+    "user1": {
+      "email": "maestro.chsolarte@gmail.com",
+      "password": "ejemplo"
+    },
+    "usuario_ghost": {
+      "email": "o.solarte@uniandes.edu.co",
+      "password": "SanMateo#24"
+    },
+    
+    "buttons": {
+        "sign-in":"[data-test-button=\"sign-in\"]",
+        "posts": "[data-test-nav=\"posts\"]",
+        "new-post":"[data-test-new-post-button]",
+        "publish": "[data-test-button=\"publish-flow\"]",
+        "continue": "[data-test-button=\"continue\"]",
+        "confirm-publish": "[data-test-button=\"confirm-publish\"]"
+      },
+      "elements": {
+        "post-title": ".gh-post-bookmark-title"
+      }
+
+}
