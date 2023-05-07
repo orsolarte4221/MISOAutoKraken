@@ -7,19 +7,25 @@ const propertiesPath = path.join(__dirname, 'post_properties.json');
 // Lee y analiza el archivo properties.json
 const properties = JSON.parse(fs.readFileSync(propertiesPath, 'utf8'));
 
+// Se obtiene  la ruta absoluta del archivo properties.json
+const variablesPath = path.join(__dirname, 'variables.json');
+// Lee y analiza el archivo properties.json
+const variables = JSON.parse(fs.readFileSync(variablesPath, 'utf8'));
+
+
 Given('I navigate to my page {string}', async function (page) {
-    let url = properties.baseUrl + page;
+    let url = variables.UrlBase;
     return await this.driver.url(url);
 });
 
 When('I enter email {string}', async function (user) {
-    let email = properties[user].email;
+    let email = variables.username;
     let element = await this.driver.$('#email');
     return await element.setValue(email);
 });
 
 When('I enter password {string}', async function (user) {
-    let password = properties[user].password;
+    let password = variables.password;
     let element = await this.driver.$('#pass');
     return await element.setValue(password);
 });
@@ -30,12 +36,12 @@ When('I click next', async function() {
 })
 
 When('I navigate to {string}', async function (page) {
-    let url = properties.baseUrl + page;
+    let url = variables.UrlBase;
     return await this.driver.url(url);
 });
 
 When('I put identification {string}', async function (user) {
-    let email = properties[user].email;
+    let email = variables.username;
     let element = await this.driver.$('#identification');
     return await element.setValue(email);
 });
@@ -48,7 +54,7 @@ When('I put value {string} in {string}', async function (input_value,input_name)
 
 
 When('I put password {string}', async function (user) {
-    let password = properties[user].password;
+    let password = variables.password;
     let element = await this.driver.$('#password');
     return await element.setValue(password);
 });

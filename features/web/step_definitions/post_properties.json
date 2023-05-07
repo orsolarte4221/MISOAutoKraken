@@ -1,9 +1,4 @@
 {  
-   "baseUrl": "http://localhost:2368",
-    "usuario_ghost": {
-      "email": "o.solarte@uniandes.edu.co",
-      "password": "SanMateo#24"
-    },    
     "buttons": {
         "sign-in":"[data-test-button=\"sign-in\"]",
         "posts": "[data-test-nav=\"posts\"]",
@@ -14,7 +9,7 @@
         "settings-menu-toggle": ".settings-menu-toggle",
         "back-to-posts-button": "[data-test-link=\"posts\"]",
         "delete-post-button": ".settings-menu-delete-button",
-        "confirm-delete-button": "//button[contains(@class, 'gh-btn') and contains(@class, 'gh-btn-red') and contains(@class, 'gh-btn-icon') and contains(., 'Delete')]",
+        "confirm-delete-button": ".gh-btn.gh-btn-red",
         "post-published":"[data-test-nav-custom=\"posts-Published\"]",
         "post-view-link": ".post-view-link",
         "miembros":"[data-test-nav=\"members\"]",

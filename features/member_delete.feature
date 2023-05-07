@@ -15,8 +15,6 @@ Scenario: Hacer Login, crear un miembro, eliminar un miembreo, validar que el mi
   And I put value "Ana Maria" in "miembro-nombre"
   And I put value "anamaria@correo.com" in "miembro-correo"
   And I click button "miembro-guardar"
-  And I wait for 3 seconds
-  And I navigate to "/ghost"
   And I wait for 4 seconds
   And I click button "miembros"
   And I wait for 4 seconds
