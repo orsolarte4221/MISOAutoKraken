@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
 // Se obtiene  la ruta absoluta del archivo properties.json
-const propertiesPath = path.join(__dirname, 'properties.json');
+const propertiesPath = path.join(__dirname, 'post_properties.json');
 // Lee y analiza el archivo properties.json
 const properties = JSON.parse(fs.readFileSync(propertiesPath, 'utf8'));
 
@@ -11,6 +11,23 @@ Given('I navigate to my page {string}', async function (page) {
     let url = properties.baseUrl + page;
     return await this.driver.url(url);
 });
+
+When('I enter email {string}', async function (user) {
+    let email = properties[user].email;
+    let element = await this.driver.$('#email');
+    return await element.setValue(email);
+});
+
+When('I enter password {string}', async function (user) {
+    let password = properties[user].password;
+    let element = await this.driver.$('#pass');
+    return await element.setValue(password);
+});
+
+When('I click next', async function() {
+    let element = await this.driver.$('#loginbutton');
+    return await element.click();
+})
 
 When('I navigate to {string}', async function (page) {
     let url = properties.baseUrl + page;
