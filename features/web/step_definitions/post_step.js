@@ -23,6 +23,13 @@ When('I put identification {string}', async function (user) {
     return await element.setValue(email);
 });
 
+When('I put value {string} in {string}', async function (input_value,input_name) {
+    const selector = properties.elements[input_name];
+    let element = await this.driver.$(selector);
+    return await element.setValue(input_value);
+});
+
+
 When('I put password {string}', async function (user) {
     let password = properties[user].password;
     let element = await this.driver.$('#password');
@@ -80,3 +87,9 @@ Then('I Find Post Tittle {string}', async function (expectedTitle) {
     assert.strictEqual(actualTitle, expectedTitle, `Expected post title to be "${expectedTitle}", but found "${actualTitle}"`); 
 });
 
+Then('I Cant Find Member {string}', async function (expectedTitle) {
+    const selector = properties.elements['miembro-titulo-nombre'];
+    const element = await this.driver.$(selector);
+    const actualTitle = await element.getText();
+    assert.notStrictEqual(actualTitle, expectedTitle); 
+});
